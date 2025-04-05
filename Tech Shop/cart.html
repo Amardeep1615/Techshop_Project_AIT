@@ -99,7 +99,7 @@
             display: inline-block;
         }
 
-        /* User hover box positioning */
+
         #user-box {
             position: absolute;
             right: 0;
@@ -118,7 +118,7 @@
             visibility: visible;
         }
 
-        /* Cart icon link */
+    
         .fa-shopping-cart {
             transition: transform 0.3s;
         }
@@ -134,7 +134,7 @@
            left: 0;
            width: 100%;
            height: 100%;
-           background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+           background-color: rgba(0, 0, 0, 0.5); 
            z-index: 1000;
            justify-content: center;
            align-items: center;
@@ -203,36 +203,28 @@
            color: #333;
         }
 
-        /* Show modal when active */
         .signup-modal.active {
            display: flex;
         }
-          .container {
+
+        .container {
             display: flex;
+            margin: 100;
             justify-content: center;
             align-items: center;
-            gap: 30px;
-            padding: 50px 20px;
-            flex-wrap: wrap;
-            min-height: 100vh;
-            box-sizing: border-box;
+            gap: 0px;
+            
         }
-
-         
-
-        
-
-        /* Cart Section */
         .cart {
-            flex: 2;
+            display: flex;
             background-color: #1e1e1e;
             padding: 25px;
-            border-radius: 15px;
+            border-radius: 10px;
             display: flex;
             flex-direction: column;
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-            max-width: 600px;
-            width: 100%;
+            max-width: 700px;
+            width: 400%;
         }
 
         .cart h3 {
@@ -241,10 +233,10 @@
             text-align: center;
         }
 
-        /* Cart Items Scrollable Box */
+        
         .cart-items {
             width: 100%;
-            max-height: 400px;/* Fixed height for scroll effect */
+            max-height: 400px;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
@@ -253,20 +245,20 @@
             border-radius: 15px;
             scrollbar-width: thin;
             scrollbar-color: red transparent;
+            
+            
         }
 
         .cart-item {
             display: flex;
-            align-items: flex-start;
             gap: 15px;
             padding-bottom: 15px;
             border-bottom: 1px solid #333;
         }
 
         .cart-item img {
-            width: 90px;
-            height: 90px;
-            object-fit: cover;
+            
+            height: 100px;
             border-radius: 8px;
         }
 
@@ -280,10 +272,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
         }
         .item-header h4 {
             font-size: 16px;
-            margin: 0;
+            
         }
         .delete-btn {
             background-color: aquamarine;
@@ -327,37 +320,42 @@
         /* Order Summary */
         .order-summary {
             flex: 1;
-            width: 100%;
-            background-color: #1e1e1e;
-            max-width: 350px;/* Fixed height for scroll effect */
-            border-radius: 15px;
+            margin-left: 40px;
+            background-color: black;
+            max-width: 400px;/* Fixed height for scroll effect */
+            border-radius: 10px;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             gap: 20px;
             padding-right: 25px;
         }
 
         .order-summary h3 {
             font-size: 22px;
-            text-align: center;
+            padding-left: 70px;
         }
         .order-summary p {
             font-size: 16px;
             display: flex;
+            padding-left: 70px;
             justify-content: space-between;
         }
         .order-summary h2 {
             display: flex;
             justify-content: space-between;
+            padding-left: 70px;
             color: red;
         }
 
         .checkout-btn {
             background: red;
+            margin-left: 20px;
+            margin-bottom: 10px;
             color: white;
             padding: 15px;
             border: none;
-            border-radius: 6px;
+            border-radius: 10px;
             font-size: 18px;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -380,7 +378,7 @@
         <div class="nav-icons">
             <!-- Search -->
             <div class="icon-container">
-                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-search" style="color: white;"></i></a>
             <div class="search-box">
                 <input type="text" placeholder="Search for items..."></div>
             </div>
@@ -388,13 +386,13 @@
             <!-- Cart -->
             <div class="icon-container">
                 <a href="cart.html" class="cart-link"> <!-- Changed to actual cart page link -->
-                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fas fa-shopping-cart" style="color: white;"></i>
                 </a>
             </div>
 
             <!-- User -->
             <div class="icon-container">
-                <a href="#user-box" class="user-icon"><i class="fas fa-user"></i></a>
+                <a href="#user-box" class="user-icon"><i class="fas fa-user" style="color: white;"></i></a>
                 <div id="user-box" class="hover-box">
                     <h2>Hello!</h2>
                     <p>Access your account to manage your orders.</p>
@@ -432,7 +430,7 @@
                         <div class="item-header">
                             <h4>JBL Live 660NC Wireless</h4>
                             <button class="delete-btn" style="background-color: aquamarine;">
-                                <i class="fas fa-trash"></i>
+                                <i class="fas fa-trash" ></i>
                             </button>
                         </div>
                         
@@ -506,7 +504,7 @@
         </div>
 
         <!-- Order Summary -->
-        <div class="order-summary" style="">
+        <div class="order-summary" >
             <h3>Order Summary (4 items)</h3>
             <p>Original Price <span>₹22,978</span></p>
             <p style="color: green;">Discount <span>- ₹10,132</span></p>
@@ -526,27 +524,42 @@
             <input type="email" id="email" name="email" placeholder="E-mail Address"  style="display: flex; flex-direction: row; ">
             <button style=" font-size: 18px;   color: white; background-color: red; margin-top: 20px; ">Subscribe</button>
         </div>
-        <div style="flex: 1; min-width: 200px; text-align: left;">
-            <h3 style="color: white; margin-bottom: 20px; font-size: 18px;">Quick Links</h3>
-            <ul style="list-style: none;">
-                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Home</a></li>
-                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Products</a></li>
-                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">About Us</a></li>
-                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Contact</a></li>
-            </ul>
-        </div>
-        <div style="flex: 1; min-width: 200px; text-align: left;">
-            <h3 style="color: white; margin-bottom: 20px; font-size: 18px;">Support</h3>
-            <ul style="list-style: none;">
-                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">FAQs</a></li>
-                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Shipping</a></li>
-                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Returns</a></li>
-                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Privacy Policy</a></li>
-            </ul>
-        </div>
-        <div style="color: #777; border-top: 1px solid #333; text-align: left; width: 100%;">
-        &copy; 2025 TechShop. All Rights Reserved.
+        <div style="display: flex; flex-direction: column; padding-right: 100px;">
+            <h3 style="color: white; margin-bottom: 20px; font-size: 18px; padding-right: 50px;">Help</h3>
+            <ul style="list-style: none;  ">
+                <li style="margin-bottom: 10px; padding-right: 90px;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">FAQS</a></li>
+                <li style="margin-bottom: 10px; padding-right: 50px;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Track Order</a></li>
+                <li style="margin-bottom: 10px;padding-right: 50px;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Cancel Order</a></li>
+                <li style="margin-bottom: 10px;padding-right: 50px;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Return Order</a></li>
+                <li style="margin-bottom: 10px;padding-right: 50px;"><a href="#" style="color: #bdc3c7; text-decoration: none; transition: color 0.3s;">Warranty Info</a></li>
+                
 
+            </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; padding-right: 150px; ">
+            <h3 style="color: white; margin-bottom: 20px; font-size: 18px; padding-right: 50px;">Policies</h3>
+            <ul style="list-style: none; ">
+                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7; padding-right:20px; text-decoration: none; transition: color 0.3s;">Terms & Conditions</a></li>
+                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7; padding-right: 90px; text-decoration: none; transition: color 0.3s;">Shipping</a></li>
+                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7; padding-right: 100px; text-decoration: none; transition: color 0.3s;">Returns</a></li>
+                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7; padding-right: 60px; text-decoration: none; transition: color 0.3s;">Privacy Policy</a></li>
+                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7; padding-right: 60px; text-decoration: none; transition: color 0.3s;">Return Policy</a></li>
+                
+            </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; padding-right: 60px; ">
+            <h3 style="color: white; margin-bottom: 20px; font-size: 18px; margin-left: 40px; padding-right: 30px; ">Company</h3>
+            <ul style="list-style: none;" >
+                <li style="margin-bottom: 10px;"><a href="./home.html" style="color: #bdc3c7;  padding-right: 50px; text-decoration: none; transition: color 0.3s;">Affiliates</a></li>
+                <li style="margin-bottom: 10px;"><a href="./product.html" style="color: #bdc3c7;  padding-right: 0px; text-decoration: none; transition: color 0.3s;">Service Centres</a></li>
+                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7;  padding-right: 40px; text-decoration: none; transition: color 0.3s;">About Us</a></li>
+                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7;  padding-right: 30px; text-decoration: none; transition: color 0.3s;">Contact Us</a></li>
+                <li style="margin-bottom: 10px;"><a href="#" style="color: #bdc3c7;  padding-right: 50px; text-decoration: none; transition: color 0.3s;">Careers</a></li>
+                
+            </ul>
+        </div>
+        <div style="color: #777; border-top: 1px solid #333; text-align: left; width: 100%; margin-top: 20px;"></div>
+         <div style="flex: 1; min-width: 200px; text-align: left;">&copy; 2025 TechShop. All Rights Reserved.</div>
     <div style="display: flex; flex-direction: row; gap: 15px;  justify-content: right;  ">
                 <a href="#" style="color: #bdc3c7; font-size: 20px; transition: color 0.3s;"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" style="color: #bdc3c7; font-size: 20px; transition: color 0.3s;"><i class="fab fa-twitter"></i></a>
@@ -559,10 +572,5 @@
     
 </footer>
 </body>
-
-    
-
-
-
 </body>
 </html>
