@@ -46,23 +46,18 @@
             position: relative;
             cursor: pointer;
             color: #ecf0f1;
+            
         }
 
         /* Search Box */
         .search-box {
             position: absolute;
             background-color: #1a1a1a;
-            right: 0;
+            right: 10px;
             width: 30px;
+            margin-top: 20px;
             margin: 0;
-           
-            
-        
-            
-            opacity: 0;
-
-            
-            
+           opacity: 0;
         }
 
         .icon-container:hover .search-box {
@@ -121,10 +116,12 @@
         #user-box {
             position: absolute;
             right: 0;
-            top: 40px; /* Distance from icon */
-            width: 200px;
-            background: #0e0e0e;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            top: 50px; /* Distance from icon */
+            width: 300px;
+            border: 2px solid #a8a8a8;
+            background: #1a1a1a;
+            margin-left: 40px;
+            box-shadow:  rgba(0,0,0,0.2);
             padding: 15px;
             opacity: 0;
             visibility: hidden;
@@ -162,7 +159,7 @@
         }
 
         .signup-content {
-           background-color: red;
+           background-color: #1a1a1a;
            padding: 30px;
            border-radius: 8px;
            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -175,7 +172,7 @@
         .signup-content h2 {
            text-align: center;
            margin-bottom: 20px;
-           color: #333;
+           color: white;
         }
 
         .signup-content form {
@@ -195,7 +192,7 @@
 
         .signup-content button {
            padding: 12px;
-           background-color: #007bff;
+           background-color: red;
            color: white;
            border: none;
            border-radius: 4px;
@@ -265,8 +262,8 @@
         <div class="nav-icons">
             <!-- Search -->
             <div class="icon-container">
-                <a href="#"><i class="fas fa-search" style="color: white;"></i></a>
-            <div class="search-box" style="background-color: #1a1a1a;">
+                <a href="#"><i class="fas fa-search" style="color: white; "></i></a>
+            <div class="search-box" style="background-color: #1a1a1a; width: 100px; border: 1px solid #1a1a1a; ">
                 <input type="text" placeholder="Search"></div>
             </div>
 
@@ -283,8 +280,9 @@
                 <a href="#user-box" class="user-icon"><i class="fas fa-user" style="color: white;"></i></a>
                 <div id="user-box" class="hover-box">
                     <h2>Hello!</h2>
-                    <p>Access your account to manage your orders.</p>
-                    <a href="#signup-modal" class="login-btn">Login</a>
+                    <p style="top: 40px;">Access your account to manage your orders.</p>
+                    <a href="#signup-modal" class="login-btn"style="background-color: #1a1a1a; color: white; border: 2px solid #ddd;">Login/signup</a>
+                    
                     <p class="signup-prompt">Please login or <a href="#signup-modal">create account</a></p>
                 </div>
             </div>
@@ -294,14 +292,23 @@
         <div id="signup-modal" class="signup-modal">
             <div class="signup-content">
                 <a href="#" class="close-btn">&times;</a>
-                <h2>Create Account</h2>
+                <h2 style="text-align: left;">Signup</h2>
+                <p style="margin-bottom: 30px;">Already have an account ? Login</p>
+
                 <form>
                     <input type="text" placeholder="Full Name" required>
                     <input type="email" placeholder="Email Address" required>
                     <input type="password" placeholder="Password" required>
                     <input type="password" placeholder="Confirm Password" required>
                     <button type="submit">Sign Up</button>
+                    
                 </form>
+                     <div style="display: flex; justify-content: center; margin-top: 10px; margin-left: 0px; gap: 10px; ">
+                          <button style="background-color: gold;">Facebook</button>
+                          <button style="margin-left: 20px; background-color: blue;">Google</button>
+                          <button style="margin-left: 10px; background-color: olive;">Twitter</button>
+                          <button style="margin-left: 10px; background-color: chocolate;" >Instagram</button>
+                     </div>
             </div>
         </div>
     
